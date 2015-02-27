@@ -1,0 +1,38 @@
+<div class="mainpage-container">
+    <div class="mainpage-main-window"> 
+        <div class="mainpage-main-picture-container">    
+            <img src="/images/GTOR_logo.PNG" width="800px" height="100px"/>
+        </div>
+    </div>
+    <div class="mainpage-box-container" >
+       
+        <div ng-repeat="num in mainpage.boxNum">
+            <div class="mainpage-box{{num}}" ng-mouseenter="mainpage.boxHover[num] = true" 
+				 ng-mouseleave="mainpage.boxHover[num] = false">
+            	<div ng-class="{'mainpage-box-title-show' : mainpage.boxHover[num], 
+							   'mainpage-box-title-hide' : !mainpage.boxHover[num]}">
+
+            	</div>
+                <div class="mainpage-box-text">
+					{{mainpage.boxDesc[num]}}
+                </div>
+				<div ng-class="{'mainpage-slideshow-right-show' : mainpage.boxHover[5], 'mainpage-slideshow-right-hide': !mainpage.boxHover[5]}" ng-if="num == 5" ng-click="mainpage.changeSlide(1)">
+					<div class="fa fa-chevron-right mainpage-slideshow-right-icon">
+					
+					</div>
+				</div>
+				<div ng-class="{'mainpage-slideshow-left-show' : mainpage.boxHover[5], 'mainpage-slideshow-left-hide': !mainpage.boxHover[5]}" ng-if="num == 5" ng-click="mainpage.changeSlide(0)">
+					<div class="fa fa-chevron-left mainpage-slideshow-left-icon">
+					
+					</div>
+				</div>
+				<div class="mainpage-box{{num}}-picture" ng-if="num != 5">
+					<img src="/images/img{{num}}.jpg" width="100%" height="100%"/>
+				</div>
+				<div class="mainpage-box{{num}}-picture" ng-if="num == 5">
+					<img src="/images/img{{mainpage.slideNum}}.jpg" width="100%" height="100%"/>
+				</div>
+        	</div>			
+        </div>    
+    </div>    
+</div>
