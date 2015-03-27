@@ -18,9 +18,17 @@
 	</head>
 	<body ng-app='thisApp' ng-controller="rootCtrl as root">
 		<div class="homepage-container">
-            <div ng-view="">
+			<div class="mainpage-container">
+				<div class="mainpage-main-window"> 
+					{{root.loc}}
+        			<div class="mainpage-main-picture-container">    
+            			<img src="/images/GTOR_logo.PNG" width="800px" height="100px"/>
+        			</div>
+    			</div>
+				<div ng-view="">
 
-            </div>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

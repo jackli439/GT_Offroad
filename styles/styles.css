@@ -44,6 +44,7 @@ body {
     left:0;
     right:0;
     top:300px;
+	background: rgb(150,150,150);
     margin-left: auto;
     margin-right: auto;
 
@@ -54,13 +55,26 @@ body {
 
 .mainpage-box1{
     position: absolute;
+	text-align: center;
     width: 30%;
     left:0;
     height:30%;
     overflow: hidden;
-    background: rgb(50,50,50);
+    background: rgb(150,150,150);
 }
-
+.mainpage-box-bodytext{
+	position: absolute;
+	overflow-y:scroll;
+	bottom: 100px;
+	top:0;
+	
+	padding: 40px;
+	margin-right: -25px;
+	padding-right: 25px;
+	padding-top:60px;
+	line-height: 180%;
+	
+}
 .mainpage-box-text{
     position: absolute;
     z-index: 10;
@@ -92,7 +106,7 @@ body {
 }
 
 
-.mainpage-box-title-show{
+.mainpage-box-shadow-show{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -104,7 +118,7 @@ body {
     transition: .2s linear;
 }
 
-.mainpage-box-title-hide{
+.mainpage-box-shadow-hide{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -134,7 +148,8 @@ body {
     width: 30%;
     right:0;
     height:40%;
-    background: rgb(100,100,100);
+	overflow: hidden;
+    background: rgb(150,150,150);
 }
 
 .mainpage-box3-picture{
@@ -150,7 +165,7 @@ body {
     top:30%;
     height:20%;
     overflow: hidden;
-    background: rgb(200,200,200);
+    background: rgb(150,150,150);
 }
 
 .mainpage-box4-picture{
@@ -167,8 +182,7 @@ body {
     top:50%;
     left:0%;
     height:30%;
-    border: 1px solid black;
-    background: rgb(100,100,100);
+    background: rgb(150,150,150);
 }
 
 .mainpage-slideshow-right-show{
@@ -260,7 +274,7 @@ body {
     right:0%;
     height:30%;
     overflow: hidden;
-    background: rgb(200,200,200);
+    background: rgb(150,150,150);
 }
 
 .mainpage-box6-picture{
@@ -289,12 +303,19 @@ body {
 
 .mainpage-box8{
     position: absolute;
-    overflow: hidden;
     width: 40%;
     top:80%;
     left:0%;
     height:20%;
-    background: rgb(50,50,50);
+    overflow: hidden;
+    background: rgb(150,150,150);
+}
+
+.mainpage-box8-picture{
+    position: absolute;
+    width:130%;
+    left: -30%;
+    height: 130%;
 }
 
 .mainpage-box9{
@@ -304,7 +325,7 @@ body {
     left:40%;
     height:20%;
     overflow: hidden;
-    background: rgb(200,200,200);
+    background: rgb(150,150,150);
 }
 
 .mainpage-box9-picture{
