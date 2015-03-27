@@ -51,6 +51,24 @@ body {
 }
 
 
+.mainpage-box-cover{
+}
+
+.mainpage-box-cover.ng-enter, .mainpage-box-cover.ng-leave {
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+
+.mainpage-box-cover.ng-enter,
+.mainpage-box-cover.ng-leave.ng-leave-active {
+  opacity:0;
+}
+
+.mainpage-box-cover.ng-leave,
+.mainpage-box-cover.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
 
 
 .mainpage-box1{
@@ -67,10 +85,9 @@ body {
 	overflow-y:scroll;
 	bottom: 100px;
 	top:0;
-	
 	padding: 40px;
 	margin-right: -25px;
-	padding-right: 25px;
+	padding-right: 40px;
 	padding-top:60px;
 	line-height: 180%;
 	

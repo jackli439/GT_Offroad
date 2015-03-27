@@ -13,7 +13,7 @@ angular.module('thisAppCtrls', [])
 			num: 1,
 			desc: "Calendar",
 			hover: false,
-			link: "Calendar",
+			link: "calendar",
 			clicked: false,
 			text: ""
 		},
@@ -45,7 +45,7 @@ angular.module('thisAppCtrls', [])
 			num: 5,
 			desc: "Photos and Video",
 			hover: false,
-			link: "",
+			link: "photosandvideos",
 			clicked: false,
 			text: ""
 		},
@@ -53,7 +53,7 @@ angular.module('thisAppCtrls', [])
 			num: 6,
 			desc: "History",
 			hover: false,
-			link: "History",
+			link: "history",
 			clicked: false,
 			text: ""
 		},
@@ -61,7 +61,7 @@ angular.module('thisAppCtrls', [])
 			num: 7,
 			desc: "Rankings",
 			hover: false,
-			link: "Rankings",
+			link: "rankings",
 			clicked: false,
 			text: ""
 		},
@@ -139,7 +139,21 @@ angular.module('thisAppCtrls', [])
 }])
 
 .controller('Interested', ['$rootScope', function($rootScope){
-
 	this.foo = "AAAAA";
-	
+}])
+
+.controller('Calendar', ['$rootScope', function($rootScope){
+	this.foo = "AAAAA";
+}])
+
+.controller('History', ['$rootScope', function($rootScope){
+	this.foo = "AAAAA";
+}])
+
+.controller('Photosandvideos', ['$rootScope', function($rootScope){
+	this.foo = "AAAAA";
+}])
+
+.controller('Rankings', ['$rootScope', function($rootScope){
+	this.foo = "AAAAA";
 }])

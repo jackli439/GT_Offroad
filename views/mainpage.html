@@ -3,12 +3,11 @@
         <div ng-repeat="box in mainpage.box">	
             <div class="mainpage-box{{box.num}}" ng-mouseenter="box.hover = true" 
 				 ng-mouseleave="box.hover = false">
-            	<div ng-if="!box.clicked" ng-class="{'mainpage-box-shadow-show' : box.hover, 
-							   'mainpage-box-shadow-hide' : !box.hover}" ng-click="box.clicked = !box.clicked">
+            	<div ng-if="!box.clicked || box.link != ''" ng-class="{'mainpage-box-shadow-show' : box.hover, 
+							   'mainpage-box-shadow-hide' : !box.hover}" ng-click="box.clicked = !box.clicked;root.changeLoc(box.link)">
             	</div>
-                <div class="mainpage-box-text" >
-					{{box.desc}} {{box.clicked}}
-					<a href="/{{box.link}}">{{box.link}}</a>
+                <div class="mainpage-box-text" ng-click="">
+					{{box.desc}}
                 </div>
 				
 				<div class="mainpage-box-bodytext" ng-click="box.clicked = !box.clicked">{{box.text}}</div>
@@ -28,7 +27,7 @@
 					</div>
 				</div>
 				
-				<div ng-if="box.clicked == false">
+				<div class="mainpage-box-cover" ng-if="box.clicked == false || box.link != ''">
 					<div class="mainpage-box{{box.num}}-picture" ng-if="box.num != 5" >
 						<img src="/images/img{{box.num}}.jpg" width="100%" height="100%"/>
 					</div>
