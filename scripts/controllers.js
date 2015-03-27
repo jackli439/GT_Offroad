@@ -43,7 +43,7 @@ angular.module('thisAppCtrls', [])
 		},
 				{
 			num: 5,
-			desc: "Photos and Video",
+			desc: "Photos and Videos",
 			hover: false,
 			link: "photosandvideos",
 			clicked: false,
