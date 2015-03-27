@@ -11,6 +11,9 @@ angular.module('thisApp',
 			templateUrl: 'views/mainpage.html',
 			controller: 'MainpageCtrl as mainpage'
 			
+		}).when('/whatisgtor',{
+			templateUrl: 'views/whatisgtor.html',
+			controller: 'Whatisgtor as whatisgtor'
 		})
 		.otherwise({
 			redirectTo: '/'

@@ -6,33 +6,39 @@
     </div>
     <div class="mainpage-box-container" >
        
-        <div ng-repeat="num in mainpage.boxNum">
-            <div class="mainpage-box{{num}}" ng-mouseenter="mainpage.boxHover[num] = true" 
-				 ng-mouseleave="mainpage.boxHover[num] = false">
-            	<div ng-class="{'mainpage-box-title-show' : mainpage.boxHover[num], 
-							   'mainpage-box-title-hide' : !mainpage.boxHover[num]}">
+        <div ng-repeat="box in mainpage.box">
+            <div class="mainpage-box{{box.num}}" ng-mouseenter="box.hover = true" 
+				 ng-mouseleave="box.hover = false">
+            	<div ng-class="{'mainpage-box-title-show' : box.hover, 
+							   'mainpage-box-title-hide' : !box.hover}">
 
             	</div>
                 <div class="mainpage-box-text">
-					{{mainpage.boxDesc[num]}}
+					{{box.desc}}
+					<a href="/whatisgtor">{{box.link}}</a>
                 </div>
-				<div ng-class="{'mainpage-slideshow-right-show' : mainpage.boxHover[5], 'mainpage-slideshow-right-hide': !mainpage.boxHover[5]}" ng-if="num == 5" ng-click="mainpage.changeSlide(1)">
+				<div ng-class="{'mainpage-slideshow-right-show' : box.hover, 'mainpage-slideshow-right-hide': !box.hover}" ng-if="box.num == 5" ng-click="mainpage.changeSlide(1)">
 					<div class="fa fa-chevron-right mainpage-slideshow-right-icon">
 					
 					</div>
 				</div>
-				<div ng-class="{'mainpage-slideshow-left-show' : mainpage.boxHover[5], 'mainpage-slideshow-left-hide': !mainpage.boxHover[5]}" ng-if="num == 5" ng-click="mainpage.changeSlide(0)">
+				<div ng-class="{'mainpage-slideshow-left-show' : box.hover, 'mainpage-slideshow-left-hide': !box.hover}" ng-if="box.num == 5" ng-click="mainpage.changeSlide(0)">
 					<div class="fa fa-chevron-left mainpage-slideshow-left-icon">
 					
 					</div>
 				</div>
-				<div class="mainpage-box{{num}}-picture" ng-if="num != 5">
-					<img src="/images/img{{num}}.jpg" width="100%" height="100%"/>
+				<div class="mainpage-box{{box.num}}-picture" ng-if="box.num != 5">
+					<img src="/images/img{{box.num}}.jpg" width="100%" height="100%"/>
 				</div>
-				<div class="mainpage-box{{num}}-picture" ng-if="num == 5">
-					<img src="/images/img{{mainpage.slideNum}}.jpg" width="100%" height="100%"/>
+				<div class="mainpage-box{{box.num}}-picture" ng-if="box.num == 5">
+					<div ng-repeat="image in mainpage.images" >
+						<div class="fadein fadeout" ng-show="image.num == mainpage.currentSlide">
+							<img src="{{image.src}}" width="100%" height="100%"/>		
+						</div>
+					</div>
 				</div>
         	</div>			
         </div>    
     </div>    
+
 </div>
