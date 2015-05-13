@@ -11,34 +11,36 @@ body {
     height: 100%;
 }
 
-.mainpage-container{
-    position: absolute;
-    width: 100%;
-    height: 2000px;
-    opacity: .85;
-	background-color: black;
-}
 
-.mainpage-main-window{
+.homepage-main-window{
     position: absolute;
     margin-top: 50px;
     width: 100%;
+    z-index: 20;
     height: 100px;
     overflow: hidden;
     background-image: url(/images/bg_color.PNG);
 }
 
-.mainpage-main-picture-container{
+.homepage-main-picture-container{
     position: absolute;
     width: 100%;
     height: 100%;
     left: 10px;
 }
 
+.mainpage-container{
+    position: absolute;
+    width: 100%;
+    height: 1800px;
+    opacity: .85;
+    z-index: 10;
+	background-color: black;
+}
 
 .mainpage-box-container{
     position: absolute;
-    height: 70%;
+    height: 75%;
     width:1200px;
     margin-top: 0px;
     left:0;
@@ -47,7 +49,6 @@ body {
 	background: rgb(150,150,150);
     margin-left: auto;
     margin-right: auto;
-
 }
 
 
@@ -69,21 +70,25 @@ body {
   opacity:1;
 }
 
-
+.mainpage-allbox{
+    position: absolute;
+    overflow: hidden;
+    background: rgb(150,150,150);
+    box-shadow: inset 0px 0px 15px 4px black;
+    -webkit-box-shadow: inset 0px 0px 15px 4px black;
+    -moz-box-shadow: inset 0px 0px 15px 4px black;
+}
 
 .mainpage-box1{
-    position: absolute;
 	text-align: center;
     width: 30%;
     left:0;
     height:30%;
-    overflow: hidden;
-    background: rgb(150,150,150);
 }
 .mainpage-box-bodytext{
 	position: absolute;
 	overflow-y:scroll;
-	bottom: 100px;
+	bottom: 75px;
 	top:0;
 	padding: 40px;
 	margin-right: -25px;
@@ -114,12 +119,9 @@ body {
 }
 
 .mainpage-box2{
-    position: absolute;
     width: 40%;
     left:30%;
     height:50%;
-    overflow: hidden;
-    background: rgb(150,150,150);
 }
 
 
@@ -161,12 +163,9 @@ body {
 }
 
 .mainpage-box3{
-    position: absolute;
     width: 30%;
     right:0;
     height:40%;
-	overflow: hidden;
-    background: rgb(150,150,150);
 }
 
 .mainpage-box3-picture{
@@ -176,13 +175,10 @@ body {
 }
 
 .mainpage-box4{
-    position: absolute;
     width: 30%;
     left:0;
     top:30%;
     height:20%;
-    overflow: hidden;
-    background: rgb(150,150,150);
 }
 
 .mainpage-box4-picture{
@@ -193,13 +189,10 @@ body {
 }
 
 .mainpage-box5{
-    position: absolute;
     width: 70%;
-	overflow: hidden;
     top:50%;
     left:0%;
     height:30%;
-    background: rgb(150,150,150);
 }
 
 .mainpage-slideshow-right-show{
@@ -285,13 +278,10 @@ body {
 
 
 .mainpage-box6{
-    position: absolute;
     width: 30%;
     top:40%;
     right:0%;
     height:30%;
-    overflow: hidden;
-    background: rgb(150,150,150);
 }
 
 .mainpage-box6-picture{
@@ -302,13 +292,10 @@ body {
 }
 
 .mainpage-box7{
-    position: absolute;
     width: 30%;
     top:70%;
     right:0%;
     height:30%;
-    overflow: hidden;
-    background: rgb(150,150,150);
 }
 
 .mainpage-box7-picture{
@@ -319,13 +306,10 @@ body {
 }
 
 .mainpage-box8{
-    position: absolute;
     width: 40%;
     top:80%;
     left:0%;
     height:20%;
-    overflow: hidden;
-    background: rgb(150,150,150);
 }
 
 .mainpage-box8-picture{
@@ -336,13 +320,10 @@ body {
 }
 
 .mainpage-box9{
-    position: absolute;
     width: 30%;
     top:80%;
     left:40%;
     height:20%;
-    overflow: hidden;
-    background: rgb(150,150,150);
 }
 
 .mainpage-box9-picture{
@@ -377,12 +358,34 @@ body {
 
 
 
-/*--------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------*/
 
 
-.whatisgtor-container{
+.calendar-container{
     position: absolute;
     width: 100%;
-    height: 100%;
-	background: white;
+    height: 1000px;
+    opacity: .85;
+    z-index: 10;
+	background-color: black;
+}
+
+.calendar-box-container{    
+    position: absolute;
+    border-radius: 5px 5px;
+    height: auto;
+    width:1000px;
+    margin-top: 0px;
+    left:0;
+    right:0;
+    top:200px;
+	background: rgb(160,160,160);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+
 }

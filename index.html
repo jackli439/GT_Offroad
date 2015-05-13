@@ -3,31 +3,46 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>GT Offroad</title>
-		<base href="/" />
-		<script type="text/javascript" src="scripts/angularjs/angular.min.js"></script>
-		<script type="text/javascript" src="scripts/angularjs/angular-route.js"></script>
-		<script type="text/javascript" src="scripts/angularjs/angular-animate.min.js"></script>
-		<script type="text/javascript" src="scripts/angularjs/angular-resource.min.js"></script>
-		
+		<base href="/index.html" />
+        
+        <!--all the angular scripts-->
+		<script type="text/javascript" src="/scripts/angularjs/angular.min.js"></script>
+		<script type="text/javascript" src="/scripts/angularjs/angular-route.js"></script>
+		<script type="text/javascript" src="/scripts/angularjs/angular-animate.min.js"></script>
+		<script type="text/javascript" src="/scripts/angularjs/angular-resource.min.js"></script>
+    
+        <!--this is for the calendar. using angular directive-->
+        <link rel='stylesheet' href='/scripts/fullcalendar/fullcalendar.css' />
+        <script type="text/javascript" src='/scripts/fullcalendar/jquery.min.js'></script>
+        <script type="text/javascript" src='/scripts/fullcalendar/moment.min.js'></script>
+        <script type="text/javascript" src='/scripts/fullcalendar/fullcalendar.js'></script>
+        <script type="text/javascript" src='/scripts/fullcalendar/calendar.js'></script>
+        <link rel="stylesheet" type="text/css" href='/scripts/fullcalendar/jquery-ui.min.css'></link>
+        <script src='/scripts/fullcalendar/gcal.js'></script>
+        
+        
+        <!--app.js is for routing(switching pages)-->
 		<script type="text/javascript" src="scripts/app.js"></script>
 		<script type="text/javascript" src="scripts/controllers.js"></script>
+		<script type="text/javascript" src="scripts/factories.js"></script>
 		
+        <!--font-awsome = icons. css for the entire website-->
 		<link rel="stylesheet" href="styles/font-awesome-4.3.0/css/font-awesome.min.css"/>
 		<link rel="stylesheet" type="text/css" href="styles/styles.css"/>
 	
 	</head>
 	<body ng-app='thisApp' ng-controller="rootCtrl as root">
 		<div class="homepage-container">
-			<div class="mainpage-container">
-				<div class="mainpage-main-window"> 
-        			<div class="mainpage-main-picture-container">    
-            			<img src="/images/GTOR_logo.PNG" width="800px" height="100px"/>
-        			</div>
-    			</div>
-				<div ng-view="">
+            <!--this holds the picture at the top-->
+            <div class="homepage-main-window"> 
+                <div class="homepage-main-picture-container">    
+                    <img src="/images/GTOR_logo.PNG" width="800px" height="100px"/>
+                </div>
+            </div>
+            <!--this is where different "pages" are loaded in-->
+            <div ng-view="">
 
-				</div>
-			</div>
+            </div>
 		</div>
 	</body>
 </html>

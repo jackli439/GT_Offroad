@@ -1,7 +1,8 @@
-<div class="">
+
+<div class="mainpage-container">
     <div class="mainpage-box-container" > 
         <div ng-repeat="box in mainpage.box">	
-            <div class="mainpage-box{{box.num}}" ng-mouseenter="box.hover = true" 
+            <div class="mainpage-box{{box.num}} mainpage-allbox" ng-mouseenter="box.hover = true" 
 				 ng-mouseleave="box.hover = false">
             	<div ng-if="!box.clicked || box.link != ''" ng-class="{'mainpage-box-shadow-show' : box.hover, 
 							   'mainpage-box-shadow-hide' : !box.hover}" ng-click="box.clicked = !box.clicked;root.changeLoc(box.link)">
@@ -10,7 +11,9 @@
 					{{box.desc}}
                 </div>
 				
-				<div class="mainpage-box-bodytext" ng-click="box.clicked = !box.clicked">{{box.text}}</div>
+				<div class="mainpage-box-bodytext" ng-if="box.clicked" ng-click="box.clicked = !box.clicked">
+                    {{box.text}}
+                </div>
 				
 				<div ng-class="{'mainpage-slideshow-right-show' : box.hover, 
 							   'mainpage-slideshow-right-hide': !box.hover}" 
@@ -43,5 +46,6 @@
         	</div>			
         </div>    
     </div>    
+    
+    </div>
 
-</div>
