@@ -19,7 +19,7 @@ body {
     z-index: 20;
     height: 100px;
     overflow: hidden;
-    background-image: url(/images/bg_color.PNG);
+    background-image: url(../images/bg_color.PNG);
 }
 
 .homepage-main-picture-container{

@@ -67,35 +67,35 @@ angular.module('thisAppCtrls', [])
 	
 	this.images = [
 		{
-			src: '/images/gallery/img-cycle1.jpg',
+			src: './images/gallery/img-cycle1.jpg',
 			num: 1
 		},
 		{
-			src:'/images/gallery/img-cycle2.jpg',
+			src:'./images/gallery/img-cycle2.jpg',
 			num: 2
 		},
 		{
-			src:'/images/gallery/img-cycle3.jpg',
+			src:'./images/gallery/img-cycle3.jpg',
 			num: 3
 		},
 		{
-			src:'/images/gallery/img-cycle4.jpg',
+			src:'./images/gallery/img-cycle4.jpg',
 			num: 4
 		},
 		{
-			src:'/images/gallery/img-cycle5.jpg',
+			src:'./images/gallery/img-cycle5.jpg',
 			num: 5
 		},
 		{
-			src:'/images/gallery/img-cycle6.jpg',
+			src:'./images/gallery/img-cycle6.jpg',
 			num: 6
 		},
 		{
-			src:'/images/gallery/img-cycle7.jpg',
+			src:'./images/gallery/img-cycle7.jpg',
 			num: 7
 		},
 		{
-			src:'/images/gallery/img-cycle8.jpg',
+			src:'./images/gallery/img-cycle8.jpg',
 			num: 8
 		},
 	]
