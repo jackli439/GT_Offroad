@@ -1,0 +1,15 @@
+<div class="history-container">
+    <div class="calendar-title">History</div>
+    <div class="history-box-container ">
+        <div ng-repeat="year in hist.years" class="history-item" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+            <div class="history-year" ng-class="{'history-year-move' : hover}">{{year.year}}</div>
+            <div class="history-desc" ng-class="{'history-desc-show' : hover}">{{year.desc}}</div>
+
+            <div class="history-background-shadow" ng-class="{'history-background-shadow-show' : hover}"></div>
+            <div class="history-background">
+                <img class="history-background-image" ng-class="{'history-background-image-move' : hover}" src="./images/img{{$index+1}}.jpg"/>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -14,54 +14,12 @@ angular.module('thisAppCtrls', [])
         MainmenuBoxes.getCalendar(),
         MainmenuBoxes.getWhatIsGtor(),
         MainmenuBoxes.getHowDoIJoin(),
-				{
-			num: 4,
-			desc: "Interested?",
-			hover: false,
-			link: "interested",
-			clicked: false,
-			text: ""
-		},
-				{
-			num: 5,
-			desc: "Photos and Videos",
-			hover: false,
-			link: "photosandvideos",
-			clicked: false,
-			text: ""
-		},
-				{
-			num: 6,
-			desc: "History",
-			hover: false,
-			link: "history",
-			clicked: false,
-			text: ""
-		},
-				{
-			num: 7,
-			desc: "Rankings",
-			hover: false,
-			link: "rankings",
-			clicked: false,
-			text: ""
-		},
-				{
-			num: 8,
-			desc: "Contact",
-			hover: false,
-			link: "",
-			clicked: false,
-			text: "For general information or inquiries, contact the team at: georgiatechoffroad@gmail.com"
-		},
-				{
-			num: 9,
-			desc: "",
-			hover: false,
-			link: "",
-			clicked: false,
-			text: ""
-		},
+		MainmenuBoxes.getInterested(),
+		MainmenuBoxes.getPhotosAndVideos(),
+		MainmenuBoxes.getHistory(),
+		MainmenuBoxes.getRankings(),
+		MainmenuBoxes.getContact(),
+		MainmenuBoxes.getNull()
 	
 	]
 	
@@ -153,8 +111,9 @@ angular.module('thisAppCtrls', [])
     
 }])
 
-.controller('History', ['$rootScope', function($rootScope){
-	this.foo = "AAAAA";
+.controller('History', ['$rootScope', 'HistoryYears', '$window', function($rootScope, HistoryYears, $window){
+    $window.scroll(0,0);
+    this.years = HistoryYears.getYears();
 }])
 
 .controller('Photosandvideos', ['$rootScope', function($rootScope){
